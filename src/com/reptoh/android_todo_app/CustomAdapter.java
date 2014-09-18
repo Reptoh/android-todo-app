@@ -3,19 +3,18 @@ package com.reptoh.android_todo_app;
 import java.util.ArrayList;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class CustomAdapter extends BaseAdapter {
 
-	private ArrayList<Todo> todosList;
+	private ArrayList<Todo> todos;
 	private LayoutInflater mInflater;
 
 	public CustomAdapter(Context c) {
@@ -23,17 +22,17 @@ public class CustomAdapter extends BaseAdapter {
 	}
 
 	public void setData(ArrayList<Todo> poolList) {
-		todosList = poolList;
+		todos = poolList;
 	}
 
 	@Override
 	public int getCount() {
-		return todosList.size();
+		return todos.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		return todosList.get(position);
+		return todos.get(position);
 	}
 
 	@Override
@@ -44,7 +43,7 @@ public class CustomAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
-
+		
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.todo, null);
 
@@ -58,20 +57,11 @@ public class CustomAdapter extends BaseAdapter {
 
 			convertView.setTag(holder);
 
-//			holder.mChecked.setOnClickListener(new View.OnClickListener() {
-//				public void onClick(View v) {
-//					CheckBox cb = (CheckBox) v;
-//					Todo country = (Todo) cb.getTag();
-//					country.setChecked(cb.isChecked());
-//					Log.v("checkbox", "changed");
-//				}
-//			});
-
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
 
-		final Todo todo = todosList.get(position);
+		final Todo todo = todos.get(position);
 
 		holder.mTitleTxt.setText(todo.getTitle());
 		holder.mDescription.setText(todo.getDescription());
@@ -83,10 +73,20 @@ public class CustomAdapter extends BaseAdapter {
 			public void onClick(View v) {
 				if (((CompoundButton) v).isChecked()) {
 					todo.setChecked(true);
-					Log.v("here", "fired!");
 				} else {
 					// Remove from checkbox array
 				}
+			}
+		});
+		
+		convertView.setOnLongClickListener(new OnLongClickListener() {
+			
+			@Override
+			public boolean onLongClick(View v) {
+				todos.remove(todo);
+				setData(todos);
+				notifyDataSetChanged();
+				return true;
 			}
 		});
 

@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.reptoh.android_todo_app.MainActivity" >
+    tools:context="com.reptoh.android_todo_app.MainActivity"
+    android:descendantFocusability="blocksDescendants" >
 
     <ListView
         android:id="@+id/todos_list"
