@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">android-todo-app</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Todos</string>
     <string name="action_add">Add todo</string>
     <string name="dialog_hint_title">Title</string>
     <string name="dialog_hint_description">Description</string>

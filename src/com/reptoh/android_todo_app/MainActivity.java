@@ -51,7 +51,8 @@ public class MainActivity extends Activity implements
 			for (Todo a : list) {
 				todos.add(a);
 			}
-		}
+		};
+		
 		refreshList(todos, mAdapter);
 
 	}
@@ -80,9 +81,7 @@ public class MainActivity extends Activity implements
 
 		todosList = (ListView) findViewById(R.id.todos_list);
 		mAdapter = new CustomAdapter(getApplicationContext());
-
 		todos = new ArrayList<Todo>();
-
 		restoreData();
 
 	}

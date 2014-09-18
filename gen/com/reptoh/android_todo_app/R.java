@@ -858,10 +858,11 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070003;
+        public static final int abc_search_url_text_holo=0x7f070004;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
+        public static final int dark_gray=0x7f070003;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -1247,16 +1248,15 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_add=0x7f0a000f;
+        public static final int action_add=0x7f0a000e;
         public static final int app_name=0x7f0a000d;
-        public static final int dialog_create_message=0x7f0a0012;
-        public static final int dialog_create_negative_button=0x7f0a0014;
-        public static final int dialog_create_positive_button=0x7f0a0013;
-        public static final int dialog_hint_description=0x7f0a0011;
-        public static final int dialog_hint_title=0x7f0a0010;
-        public static final int hello_world=0x7f0a000e;
-        public static final int shared_pref_todos=0x7f0a0015;
-        public static final int shared_pref_todos_default=0x7f0a0016;
+        public static final int dialog_create_message=0x7f0a0011;
+        public static final int dialog_create_negative_button=0x7f0a0013;
+        public static final int dialog_create_positive_button=0x7f0a0012;
+        public static final int dialog_hint_description=0x7f0a0010;
+        public static final int dialog_hint_title=0x7f0a000f;
+        public static final int shared_pref_todos=0x7f0a0014;
+        public static final int shared_pref_todos_default=0x7f0a0015;
     }
     public static final class style {
         /** 
