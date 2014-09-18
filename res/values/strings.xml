@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">android-todo-app</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_add">Add todo</string>
+    <string name="dialog_hint_title">Title</string>
+    <string name="dialog_hint_description">Description</string>
+    <string name="dialog_create_message">Todo create</string>
+    <string name="dialog_create_positive_button">Ok</string>
+    <string name="dialog_create_negative_button">Cancel</string>
+    <string name="shared_pref_todos">todos</string>
+    <string name="shared_pref_todos_default"></string>
+
+</resources>
