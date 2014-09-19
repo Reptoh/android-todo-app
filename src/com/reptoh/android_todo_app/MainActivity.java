@@ -18,6 +18,7 @@ public class MainActivity extends Activity implements
 	private ListView todosList;
 	private ArrayList<Todo> todos;
 	private CustomAdapter mAdapter;
+	SharedPreferences sharedPref;
 
 	public void refreshList(ArrayList<Todo> todos, CustomAdapter adapter) {
 		mAdapter.setData(todos);
@@ -29,7 +30,10 @@ public class MainActivity extends Activity implements
 		Gson gson = new Gson();
 		String json = gson.toJson(todos);
 
-		SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+		if(sharedPref==null){
+			sharedPref = getPreferences(Context.MODE_PRIVATE);
+		}
+		
 		SharedPreferences.Editor editor = sharedPref.edit();
 		editor.putString(getString(R.string.shared_pref_todos), json);
 		editor.commit();

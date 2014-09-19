@@ -43,7 +43,7 @@ public class CustomAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
-		
+
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.todo, null);
 
@@ -71,16 +71,12 @@ public class CustomAdapter extends BaseAdapter {
 
 			@Override
 			public void onClick(View v) {
-				if (((CompoundButton) v).isChecked()) {
-					todo.setChecked(true);
-				} else {
-					// Remove from checkbox array
-				}
+				todo.setChecked(((CompoundButton) v).isChecked());
 			}
 		});
-		
+
 		convertView.setOnLongClickListener(new OnLongClickListener() {
-			
+
 			@Override
 			public boolean onLongClick(View v) {
 				todos.remove(todo);
