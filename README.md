@@ -2,7 +2,6 @@
 Simple todo app for android. Eclipse + ADT plugin.
 
 Install:
-
 1.Open Eclipse
 2.File > Import(Choose cloned project)
 3.Click + in General > Existing Project into Workspace and click Next.
